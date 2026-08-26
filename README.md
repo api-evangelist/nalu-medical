@@ -64,5 +64,8 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Nalu Medical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Nalu Medical, Inc. is a privately held, commercial-stage medical device company headquartered in Carlsbad, California, that develops the Nalu Neurostimulation System for the management of chronic pain. The system pairs a battery-free micro implantable pulse generator (mIPG) with an externally worn Therapy Disc that powers it wirelessly, and is controlled by the patient through a smartphone-based remote-control application; it is FDA-cleared for both spinal cord stimulation (SCS) and peripheral nerve stimulation (PNS).
+
+Nalu Medical operates no public developer program. As of the 2026-08-26 enrichment pass there is no API reference, no OpenAPI/AsyncAPI/GraphQL/gRPC/WSDL contract, no SDK, no CLI and no MCP server on any host the company controls; `api.nalumed.com`, `developer.nalumed.com` and `docs.nalumed.com` do not resolve. See `well-known/nalu-medical-contract-discovery.yml` for the full probe record.
+
+- https://nalumed.com/

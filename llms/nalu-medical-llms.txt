@@ -1,0 +1,66 @@
+# Nalu Medical
+
+> Nalu Medical, Inc. is a privately held, commercial-stage medical device company in Carlsbad,
+> California. It develops the Nalu Neurostimulation System: a battery-free micro implantable pulse
+> generator (mIPG) powered wirelessly by an externally worn Therapy Disc and controlled by the
+> patient through a smartphone remote-control app, FDA-cleared for spinal cord stimulation (SCS) and
+> peripheral nerve stimulation (PNS) for chronic pain.
+
+## Important for agents
+
+Nalu Medical publishes **no public API**. As of 2026-08-26 there is no developer portal, no API
+reference, no OpenAPI/AsyncAPI/GraphQL/gRPC/WSDL contract, no SDK, no CLI, no webhook catalog and no
+MCP server on any host the company controls. `api.nalumed.com`, `developer.nalumed.com` and
+`docs.nalumed.com` do not resolve. Do not attempt to construct calls against a Nalu Medical API;
+none is documented. Product, clinical and regulatory information below is for reading, not calling.
+
+- Generated: 2026-08-26
+- Method: generated (from apis.yml and this repository's probe records - Nalu Medical does not
+  publish its own /llms.txt; https://nalumed.com/llms.txt returns 404)
+
+## Company
+
+- [Nalu Medical](https://nalumed.com/): Corporate site.
+- [About Us](https://nalumed.com/about-us/): Company overview; HQ at 2320 Faraday Avenue, Suite 100, Carlsbad, CA.
+- [Our Technology](https://nalumed.com/our-technology/): How the mIPG and Therapy Disc work.
+- [Product Information](https://nalumed.com/product-information/): The Nalu Neurostimulation System.
+- [Applications](https://nalumed.com/applications/): SCS and PNS indications.
+- [Careers](https://nalumed.com/careers/) and [Open Positions](https://nalumed.com/careers/open-positions/).
+- [Contact Us](https://nalumed.com/contact-us/): info@nalumed.com, 760.448.2360.
+
+## Clinical and regulatory
+
+- [Clinical Evidence](https://nalumed.com/clinical-evidence/): Study results including the COMFORT RCT.
+- [Publications](https://nalumed.com/publications/): Peer-reviewed literature.
+- [Instructions for Use](https://nalumed.com/ifus/): IFU documents (PDF).
+- [Product Safety Information](https://nalumed.com/product-safety-information/).
+- [Patents](https://nalumed.com/patents/).
+- [Compliance](https://nalumed.com/compliance/): California Health & Safety Code Section 119402 declaration. This is healthcare marketing compliance - it is NOT a security or data-protection certification program, and no SOC 2 / ISO 27001 / HIPAA attestation is published.
+
+## For patients and providers
+
+- [Patients](https://nalumed.com/patients/) and [Patient Resources](https://nalumed.com/patients/resources/).
+- [Providers](https://nalumed.com/providers/) and [Provider Resources](https://nalumed.com/providers/resources/).
+- [FAQs](https://nalumed.com/faqs/).
+- [Nalu Academy](https://nalumed.com/academy/).
+- [Reviews](https://nalumed.com/reviews/).
+
+## News
+
+- [News & Events](https://nalumed.com/news-events/)
+- [RSS feed](https://nalumed.com/feed/)
+
+## Legal
+
+- [Website Terms and Conditions](https://nalumed.com/website-terms-and-conditions/)
+- [Terms and Conditions](https://nalumed.com/terms-and-conditions/)
+- [Purchasing Terms and Conditions](https://nalumed.com/purchasing-terms-and-conditions/)
+- [Privacy Policy](https://nalumed.com/privacy-policy/)
+
+## Code
+
+- [GitHub organization](https://github.com/NaluMedical): real, owned by the company, 0 public repositories.
+
+## Optional
+
+- [portal.nalumed.com](https://portal.nalumed.com/): an Azure App Service (Nalu Cloud Portal) that resolves but answers HTTP 404 with an empty body on every anonymous path, including the root. No public contract, no login page reachable anonymously.

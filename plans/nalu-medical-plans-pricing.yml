@@ -1,0 +1,18 @@
+generated: '2026-08-26'
+method: searched
+source: https://nalumed.com/sitemap_index.xml
+plan_count: 0
+note: >-
+  Nalu Medical publishes no plans or pricing of any kind. It is an FDA-regulated implantable medical
+  device manufacturer selling through hospitals, ambulatory surgery centres and physician practices;
+  device and procedure pricing is set by purchasing agreements and payer reimbursement, not by a
+  published tier list. The full 57-page sitemap was walked on 2026-08-26 and contains no pricing
+  page; the only commerce-adjacent pages are /store/ and /purchasing-terms-and-conditions/. There is
+  no API, so there is no API pricing either. NO Plans pointer is wired in apis.yml - this file
+  records an absence, not a presence.
+plans: []
+evidence:
+- url: https://nalumed.com/sitemap_index.xml
+  status: 200
+- url: https://nalumed.com/purchasing-terms-and-conditions/
+  status: 200

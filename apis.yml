@@ -1,7 +1,17 @@
 aid: nalu-medical
 name: Nalu Medical
-description: 'Nalu Medical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Nalu Medical, Inc. is a privately held, commercial-stage medical device company headquartered in
+  Carlsbad, California, that develops the Nalu Neurostimulation System for the management of chronic
+  pain. The system pairs a battery-free micro implantable pulse generator (mIPG) with an externally
+  worn Therapy Disc that powers it wirelessly, and is controlled by the patient through a
+  smartphone-based remote-control application; it is FDA-cleared for both spinal cord stimulation
+  (SCS) and peripheral nerve stimulation (PNS). Nalu publishes patient and provider resources,
+  instructions for use, clinical evidence and peer-reviewed publications on nalumed.com. It operates
+  no public developer program - as of the 2026-08-26 enrichment pass there is no API reference, no
+  OpenAPI/AsyncAPI/GraphQL contract, no SDK, no MCP server and no developer portal on any host the
+  company controls.
+image: https://nalumed.com/wp-content/uploads/2022/06/nalu-social.png
 url: https://raw.githubusercontent.com/api-evangelist/nalu-medical/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +22,13 @@ created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Medical Devices
+- Healthcare
+- Neuromodulation
+- Neurostimulation
+- Chronic Pain
+- Implantable Devices
+- Medical Technology
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,47 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/nalu-medical-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://nalumed.com/
+- type: Blog
+  url: https://nalumed.com/news-events/
+- type: BlogRSS
+  url: https://nalumed.com/feed/
+- type: Support
+  url: https://nalumed.com/contact-us/
+- type: TermsOfService
+  url: https://nalumed.com/website-terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://nalumed.com/privacy-policy/
+- type: GitHubOrganization
+  url: https://github.com/NaluMedical
+- type: LLMsTxt
+  url: llms/nalu-medical-llms.txt
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Nalu Medical ships an FDA-cleared implantable neurostimulator with a companion patient smartphone
+    app and a clinician cloud portal, but exposes none of it to third parties - api.nalumed.com,
+    developer.nalumed.com and docs.nalumed.com do not resolve, the 57-page sitemap has no developer
+    section, and portal.nalumed.com (the Azure-hosted Nalu Cloud Portal) answers HTTP 404 with an
+    empty body on every anonymous path including its own root.
+  evidence:
+  - url: https://nalumed.com/developers
+    status: 404
+  - url: https://nalumed.com/openapi.json
+    status: 404
+  - url: https://nalumed.com/llms.txt
+    status: 404
+  - url: https://portal.nalumed.com/
+    status: 404
+  - url: https://nalumed.com/sitemap_index.xml
+    status: 200
+  checked: '2026-08-26'

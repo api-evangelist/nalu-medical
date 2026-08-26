@@ -1,0 +1,45 @@
+generated: '2026-08-26'
+method: probed
+source: https://nalumed.com/.well-known/
+note: >-
+  Every /.well-known/ path probed on the two hosts Nalu Medical controls returned 404. nalumed.com is
+  a WordPress site whose 404 handler answers with the full HTML site shell (HTTP 404, ~105KB of
+  text/html), so no path returned a document. portal.nalumed.com (an Azure App Service,
+  nalucloudportalappservice2.azurewebsites.net) answers 404 with an empty body on every path
+  including the site root. NO WellKnown / SecurityTxt pointer is emitted in apis.yml because nothing
+  was served - this file records an absence, not a presence.
+hosts:
+- host: nalumed.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: portal.nalumed.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null

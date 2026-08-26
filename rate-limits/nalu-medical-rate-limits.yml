@@ -1,0 +1,16 @@
+generated: '2026-08-26'
+method: searched
+source: https://nalumed.com/
+limit_count: 0
+note: >-
+  No rate limits are documented because no API is published. STEP 0b contract discovery
+  (well-known/nalu-medical-contract-discovery.yml) found no OpenAPI, GraphQL, AsyncAPI, gRPC or WSDL
+  contract on any Nalu Medical host, and api./developer./docs.nalumed.com do not resolve in DNS. The
+  only live JSON surface is the WordPress core REST API of the marketing CMS, which is not a Nalu
+  product. NO RateLimits pointer is wired in apis.yml - this file records an absence, not a presence.
+rate_limits: []
+evidence:
+- url: https://nalumed.com/developers
+  status: 404
+- url: https://nalumed.com/api
+  status: 404

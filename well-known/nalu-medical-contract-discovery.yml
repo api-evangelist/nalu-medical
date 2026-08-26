@@ -1,0 +1,91 @@
+generated: '2026-08-26'
+method: probed
+source: https://nalumed.com/
+note: >-
+  STEP 0b contract discovery for Nalu Medical. Every probe below was run on 2026-08-26 with a browser
+  User-Agent. No machine-readable API contract of any kind (OpenAPI, Swagger, GraphQL SDL, AsyncAPI,
+  gRPC/protobuf, WSDL) is published on any host the company controls. The one live JSON surface,
+  nalumed.com/wp-json/, is the WordPress core REST API of the marketing CMS with its plugin
+  namespaces - it is not a Nalu Medical product API and is NOT recorded as one.
+hosts_considered:
+- nalumed.com          # corporate site, WordPress
+- www.nalumed.com      # 301 -> nalumed.com
+- portal.nalumed.com   # Azure App Service (nalucloudportalappservice2.azurewebsites.net)
+hosts_not_resolving:
+- api.nalumed.com
+- developer.nalumed.com
+- docs.nalumed.com
+- cloud.nalumed.com
+- my.nalumed.com
+- app.nalumed.com
+- clinician.nalumed.com
+- support.nalumed.com
+- status.nalumed.com
+- trust.nalumed.com
+probes:
+- url: https://nalumed.com/
+  status: 200
+  result: WordPress corporate site (text/html)
+- url: https://nalumed.com/openapi.json
+  status: 404
+  result: WordPress HTML 404 shell, not a spec
+- url: https://nalumed.com/swagger.json
+  status: 404
+  result: WordPress HTML 404 shell
+- url: https://nalumed.com/api-docs
+  status: 404
+  result: WordPress HTML 404 shell
+- url: https://nalumed.com/docs
+  status: 404
+  result: WordPress HTML 404 shell
+- url: https://nalumed.com/developers
+  status: 404
+  result: WordPress HTML 404 shell
+- url: https://nalumed.com/api
+  status: 404
+  result: WordPress HTML 404 shell
+- url: https://nalumed.com/graphql
+  status: 404
+  result: no GraphQL surface; introspection not attempted
+- url: https://nalumed.com/llms.txt
+  status: 404
+  result: not published
+- url: https://nalumed.com/robots.txt
+  status: 200
+  result: crawlable; disallows only /wp-admin/ and Gravity Forms export paths
+- url: https://nalumed.com/sitemap_index.xml
+  status: 200
+  result: 3 child sitemaps, 57 pages - no developer/API page among them
+- url: https://portal.nalumed.com/
+  status: 404
+  result: Azure App Service answers 404 with an empty body at the root and on every probed path
+- url: https://portal.nalumed.com/swagger/v1/swagger.json
+  status: 404
+  result: empty body
+- url: https://portal.nalumed.com/openapi.json
+  status: 404
+  result: empty body
+- url: https://nalumed.com/wp-json/
+  status: 200
+  result: >-
+    WordPress core REST API discovery document, 486 routes across 28 namespaces, all of them
+    WordPress core or third-party plugin namespaces (wp/v2, oembed/1.0, rankmath, gf/v2 Gravity
+    Forms, wpforms, monsterinsights, redirection, leadin/HubSpot, generateblocks, ai1wm, wpaas,
+    two-factor, objectcache, wp-abilities/v1, mcp). No Nalu-authored namespace. This is CMS
+    infrastructure, not a published Nalu Medical API - no OpenAPI is saved and no API entry is wired.
+- url: https://nalumed.com/wp-json/mcp/mcp-adapter-default-server
+  status: 401
+  result: >-
+    The WordPress MCP Adapter plugin exposes a JSON-RPC endpoint here. Both initialize and tools/list
+    returned HTTP 401 {"code":"rest_forbidden"}. This is the WordPress plugin's own default server,
+    not a Nalu Medical MCP product, so NO MCPServer pointer is emitted - emitting one would credit
+    the company with an agent surface it did not publish.
+- url: https://github.com/NaluMedical
+  status: 200
+  result: >-
+    Real GitHub organization owned by the company (display name "Nalu Medical", created 2016-05-23)
+    with 0 public repositories - no .proto, no WSDL, no SDK, no spec.
+- url: https://registry.npmjs.org/-/v1/search?text=nalu%20medical
+  status: 200
+  result: no first-party Nalu Medical package on npm
+conclusion: no-published-contract
