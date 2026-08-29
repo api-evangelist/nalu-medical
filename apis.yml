@@ -11,6 +11,17 @@ description: >-
   no public developer program - as of the 2026-08-26 enrichment pass there is no API reference, no
   OpenAPI/AsyncAPI/GraphQL contract, no SDK, no MCP server and no developer portal on any host the
   company controls.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://nalumed.com/wp-content/uploads/2022/06/nalu-social.png
 url: https://raw.githubusercontent.com/api-evangelist/nalu-medical/refs/heads/main/apis.yml
 x-type: company
