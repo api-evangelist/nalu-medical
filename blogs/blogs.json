@@ -2,27 +2,20 @@
   "repo": "nalu-medical",
   "feeds": [
     {
-      "source": "https://nalumed.com/",
-      "feed_url": "https://nalumed.com/feed/",
-      "title": "",
-      "saved": 0,
-      "method": "discovered"
-    },
-    {
       "source": "https://nalumed.com/news-events/",
-      "feed_url": "https://nalumed.com/feed/",
+      "feed_url": "https://nalumed.com/news-events/",
       "title": "",
       "saved": 0,
-      "method": "discovered"
+      "method": "none"
     },
     {
       "source": "https://nalumed.com/feed/",
       "feed_url": "https://nalumed.com/feed/",
       "title": "",
       "saved": 0,
-      "method": "feed"
+      "method": "none"
     }
   ],
   "post_count": 10,
-  "fetched": "2026-10-03T12:30:02Z"
+  "fetched": "2026-10-10T13:15:00Z"
 }
